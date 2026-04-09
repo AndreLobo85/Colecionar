@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Colecionar.pt | O seu relicário digital de colecionáveis</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#a70138",
+                    "on-error-container": "#ffb2b9",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary-fixed-variant": "#563400",
+                    "tertiary-container": "#f8a010",
+                    "tertiary-fixed": "#f8a010",
+                    "tertiary": "#ffb148",
+                    "primary-fixed-dim": "#a67aff",
+                    "surface-container-high": "#241647",
+                    "surface-bright": "#31215b",
+                    "secondary-fixed-dim": "#48d4f3",
+                    "primary": "#bd9dff",
+                    "on-primary-fixed": "#000000",
+                    "on-surface-variant": "#b1a4d2",
+                    "on-tertiary": "#573500",
+                    "error-dim": "#d73357",
+                    "secondary-dim": "#40ceed",
+                    "surface-dim": "#11072c",
+                    "surface-tint": "#bd9dff",
+                    "on-primary-fixed-variant": "#390083",
+                    "outline-variant": "#4c4269",
+                    "primary-dim": "#8a4cfc",
+                    "surface-variant": "#2a1c51",
+                    "tertiary-dim": "#e79400",
+                    "background": "#11072c",
+                    "on-surface": "#ebe1ff",
+                    "secondary": "#53ddfc",
+                    "surface-container-low": "#170b35",
+                    "on-secondary-fixed": "#003a45",
+                    "inverse-on-surface": "#594f77",
+                    "inverse-surface": "#fdf7ff",
+                    "on-primary-container": "#2e006c",
+                    "on-secondary-fixed-variant": "#005969",
+                    "surface": "#11072c",
+                    "error": "#ff6e84",
+                    "secondary-container": "#00687a",
+                    "on-tertiary-container": "#4a2c00",
+                    "tertiary-fixed-dim": "#e79400",
+                    "on-primary": "#3c0089",
+                    "secondary-fixed": "#65e1ff",
+                    "outline": "#7a6f9a",
+                    "surface-container": "#1d113e",
+                    "primary-fixed": "#b28cff",
+                    "primary-container": "#b28cff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container-highest": "#2a1c51",
+                    "on-background": "#ebe1ff",
+                    "on-error": "#490013",
+                    "on-secondary": "#004b58",
+                    "on-secondary-container": "#ecfaff",
+                    "inverse-primary": "#742fe5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #11072c;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(189, 157, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(83, 221, 252, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass {
+            background: rgba(42, 28, 81, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-mesh {
+            background: radial-gradient(circle at 50% 50%, rgba(189, 157, 255, 0.15) 0%, rgba(17, 7, 44, 0) 70%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#11072c]/80 backdrop-blur-xl shadow-[0_0_20px_rgba(189,157,255,0.1)] font-['Space_Grotesk'] tracking-tight">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative">
+<div class="text-2xl font-bold tracking-tighter text-[#ebe1ff]">Colecionar.pt</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Categorias</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Destaques</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Lojas</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Contactos</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#bd9dff] hover:scale-105 transition-transform" data-icon="shopping_cart">shopping_cart</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-6 py-2 rounded font-bold hover:scale-105 active:scale-95 transition-all duration-300">
+                    Loja Online
+                </button>
+</div>
+<div class="bg-gradient-to-r from-transparent via-[#53ddfc15] to-transparent h-[1px] bottom-0 absolute left-0 right-0"></div>
+</div>
+</nav>
+<!-- HERO SECTION -->
+<header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+<div class="absolute inset-0 hero-mesh z-0"></div>
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+<h1 class="font-headline text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-gradient-to-b from-on-surface to-on-surface-variant bg-clip-text text-transparent">
+                Um Mundo de Magia<br/>Num Único Local
+            </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-12 leading-relaxed">
+                Funko POPs, LEGO, Magic the Gathering, Pokemon, manga e muito mais. A maior coleção de colecionáveis em Portugal.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<button class="group relative px-8 py-4 bg-gradient-to-br from-primary to-secondary rounded font-bold text-on-primary-fixed hover:shadow-[0_0_30px_rgba(83,221,252,0.4)] transition-all duration-500 scale-100 hover:scale-105 active:scale-95">
+                    Explorar Coleção
+                </button>
+<button class="px-8 py-4 border border-outline-variant/30 glass rounded font-bold text-on-surface hover:border-primary/50 transition-all duration-300 scale-100 hover:scale-105 active:scale-95">
+                    Visitar Loja
+                </button>
+</div>
+</div>
+<!-- Decorative Silhouettes -->
+<div class="absolute -bottom-20 left-0 w-full flex justify-between px-10 opacity-20 pointer-events-none">
+<img class="w-64 h-auto transform -rotate-12 translate-y-10" data-alt="Dark silhouette of a high-end collectible action figure standing heroically against a deep purple misty background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2ihB7vtSKaVPVPTdPbQKdtKBHZfWQrTM5BQv1SW-DerWehFmRpsBPsshQQiVcKHKSYc3v2dAK8acCU_s9niyClVOKzq08Bb6-DQxzyw6QwAld5Kzc_Idant3LVU8Kw9P-aGNcSRAQtw9ALS1pfWL2pn1YihmM4vVqLTXGpg6XrNkUogTx7gQ0EbkqwASEc9sMTQ6BkI9JkQ2TfGSPx8Rgfkbpcc5xJt5B1VWy1Ax--vWNLoXKeH0SkWoZ3uJGI92ZNXFEfnjZvJ0"/>
+<img class="w-80 h-auto transform rotate-12 translate-y-20" data-alt="Silhouette of a dragon statue with glowing highlights on a dark mystical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsqQFutxQz51JjlHHlTRBQSlxNj_XOMmSUKNPwGfz-GTUptV3W-10sWoqDVxOG7oh8PymtfBCATp_nLsiVDB-eMvwkNH-MnNHOU7VbOSL2LuJWm4GNWolXqXMnR-DZiAx9zTz3fvafasiHCHfASc5oS1uV2Dh-Ysqiwnoj--D7DWY_TKBm0Zjmj1CnC1Zn-rsIOhZ-83HWA8r4Zo9FvD5zgJZJsRIHoe6AZHzuEe5yF612k6TfnBsDBvBv8vbUvspCpVIzn8-p_w"/>
+</div>
+</header>
+<!-- FEATURED CATEGORIES -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-16 text-center">O Que Colecionas?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Category Cards -->
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-6xl">toys</span>
+</div>
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Close up of a stylized vinyl pop culture figure with vibrant colors on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrJpzPlFnenV-RVjnts8Q9cH3Fm5vq-GWRBFQdwRljwfa22TnAoiTWa06nreH00khgxmvGwx7wcmZ7X1k7-Dbb4mux6AhKg2BXhB7ahe3s-TcEscummoMnAuOiONh6YxWTooJflRGb1_UROFGmaKqdzl69YFIvQmR-YVkYb3VU2UkVa1TqA2d_tg6TJNemPDLg55AnaR_G8vhHj_JE4F-asV2Yav_oGqKf2jQawFaE0bra9bqYUqt7iy0UDcPB7jSQotx2sxaYWHc"/>
+<h3 class="text-xl font-bold mb-2">Funko POP</h3>
+<p class="text-sm text-on-surface-variant">As figuras mais icónicas da cultura pop</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Detailed close up of plastic building blocks arranged artistically with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcAPUN4L8Ty8V_skH1LAtGcPxI5u_R8MjQsXqIZoveI9RufqEwRL6uUMQ3tjvEb5TOYpgBqV_CG_R4-ug5OUaKK-lWnNHxKPwnLQwiY70_gQFgvEn4VppqG8-pIgC3zxYkXnVXcqshsoTQOwdxpAY87RfsIJZqanFw3iyoqYxde1sTQUfWrBzY2IkB7kihYj1lg5u8B1ayB2cm51U52GhtJFh9hzIKA4g8_j4kFxK4K4UL94y9fynew0ov0iy6jdvvopkloaD42FA"/>
+<h3 class="text-xl font-bold mb-2">LEGO</h3>
+<p class="text-sm text-on-surface-variant">Sets exclusivos e colecionáveis</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Collection of collectible trading cards with intricate fantasy artwork and foil highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEtXT0FBtdDrI-jP6NkuvDxijMnx9jHRkOhBaXbC2FV5_NK2SyM-BhetCrbA_JTyyTQYfRF_o7k_PpR9G3a1t8FbMJ1FoUXyZxRNbJihHcLzEj8jciaJaHxcJ_VXlqWrYoMTT9BwCuvHYZ_Ea4FBi9cEyfz8EA3DalcZKjtsAsfhM9EADclzRdz_hW4_goENZTulWI8khSzNhr_k_p66u3nsHKqTQ0EGx7p-sanoUN6r4v9N5ng-_Io6wGnT6f4Oxdxeakm1uZokk"/>
+<h3 class="text-xl font-bold mb-2">Magic the Gathering</h3>
+<p class="text-sm text-on-surface-variant">Cartas, decks e acessórios</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A rare shiny trading card with a pocket monster design and metallic texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BpLhjeWlGx4RnGiBc-02D4l5WYIx8c_ubD78JpTbkxQi968b6OVxtQU00ORzmHivD9E9qSEr6uAE4_q-Q5IWiRZ9XiYXDtosRONzcwQ73eHNde1zdGnDtD2vK_rdP9_04PnH48GTjXBnpaD5hhQdtZWFL9RFN93ybY2hqEv-oNAbUZZDLK2RVu5HqmhVJOPmhmRiAjZ9jhc9Zys2sHtUom80W1rCagMVT-1DQsEWkZQ3B6-YAA7xDATyckGdcKTt9QZoKNyonlE"/>
+<h3 class="text-xl font-bold mb-2">Pokemon TCG</h3>
+<p class="text-sm text-on-surface-variant">Coleção completa de cartas Pokemon</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A stack of Japanese graphic novels with colorful cover art on a dark bookshelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzTXZHv5SJo-afCV5c38pH8JI8eXrsdadCmHB6Hppl8c_3jKoipBwwAjAUbvPY0pF82nGfYv5KYNxjTA1vkI_dxuhQ1YUwyJQzFQruAMm85KyVj1pzf0gODnNlIHSe3L5BUrnA2l0Kgi3TYFLEys5N_3YOG3OsoBqMTJnvrpo8U2nC9X13TQeB1GGIp_TG9AKM_vscmk_DOHxrg8rE_uFQYkD3bo2bSDDywg-0-duAPFUHEp2H1ryNqfteZyMxl0tZshK4-PtxO3Y"/>
+<h3 class="text-xl font-bold mb-2">Yu-Gi-Oh</h3>
+<p class="text-sm text-on-surface-variant">Cartas e boosters</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A detailed gold and silver replica of a magical artifact from a famous film series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpyb-D092Lo0P7XdzuEvBWH2-R6hblSpf_aj9Bn1egIgoP_XtVlWaSD5_tdulqxZw45GBCuz4sPCbDKrYF48jAEdYFHbJHMR2GC8CKX4Vh0E_eGrxQ8FjgdnJMnEaw8buASF8Qd0KzQub_ntjnkVQxPsYMvWQS_HQ0FVcVJkIYL61yNIDsILo6sX2JLnVAiwDzsC258dipxTxhjslG0ykWEU5N-G2iPWyA5WuZAmGTIZZbi41UT7QqDCXjSZ3Wfk2U9or-YSSGkQ"/>
+<h3 class="text-xl font-bold mb-2">The Noble Collection</h3>
+<p class="text-sm text-on-surface-variant">Réplicas premium de filmes</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Close up of Japanese manga books spine art on a dark purple surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURwry9RiBF1R7q3g645mCFyg72QZD1v576wNH22m78tlZFId3O4hD-C4872ffc8J9DnXsrpGyaKkTnyDhttQ5YVFKqcbD7lH4FviwgTEIUmDpuvz2magVbHQ4BYo25Cf3vtEAoHc2yQfFKbsuV6mvbKATechM_fV1kbqy8E3NOZzNgwmu0KF_I_6XwGGArW0oPtfhPoBbmLgGGc0hAsiQgdmDaVGCmi_AllrDoE-k_7QiHWTYFULfwzLzJ8p6FSSUkVne0g-qHRo"/>
+<h3 class="text-xl font-bold mb-2">Manga e Livros</h3>
+<p class="text-sm text-on-surface-variant">As melhores séries e edições</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
+<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Hand painted miniature figures from a wargaming series with metallic armor and glowing details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChV9xsK6qZyGpq2vwoGM03a3d51f-BeKORCB2UYEtjre1fZDTmxZkLFsAZWf-vbR_PQwUO78fPJoUmyYndcZQFkXHqkUYgmul0egmDtJcVZ7nu913J17WIWdVhT6CFCVxeG_q81E77Ys1TODamQFfZsojJssYCN5WLJ4hczTth7Esbndo6DyQ0a66FoctNmg4eKmDnHg9uTcWJQLuXOFRFWwnAfR2EHrbT08CFT7yY9NxLma84WcPW0v2t3M-rzXef_IIMSNzoo00"/>
+<h3 class="text-xl font-bold mb-2">Games Workshop</h3>
+<p class="text-sm text-on-surface-variant">Warhammer e miniaturas</p>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+</div>
+</div>
+</section>
+<!-- DESTACADOS -->
+<section class="py-24 bg-surface-container-low/30 relative overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline text-4xl font-bold">Destaques</h2>
+<div class="flex gap-4">
+<button class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 -mx-4 px-4">
+<!-- Product Card 1 -->
+<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="Funko POP figure in original box, collector edition, pristine condition on dark shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1XNmGXAAywql5JPfhWallQmLUSH93EJVjB9ZAUCTpsQ9C9UWiTOVkJ-KAFTbJPYNsIW-2xada2zP_i0v4pRSAN7L8PDjxTVgUSFnS3XJLuIaxoNzubcQ1qBJGQS4zGlMPApRvFrY9neivcd-rBDGZHt_L0mvdQz1LVvU4CBa-RaOSyFyZ98c94olUobldN6yEBly2xAusLbW6TjiM9zB7LgBhLF_Ob1YaddHh8ghC8n-l0R3ghuQAy1imgAV23iBUR75-_klI7Wk"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase">Novo</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2 truncate">Funko POP! Marvel: Iron Man</h4>
+<div class="flex justify-between items-center mb-6">
+<span class="text-secondary font-bold text-xl">15.90 €</span>
+<span class="text-on-surface-variant text-xs line-through">19.90 €</span>
+</div>
+<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                            Adicionar ao Carrinho
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="LEGO Architecture set box featuring a modern city skyline with detailed brick work" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeyw2J2tEzTvlNOMpM4A75ZtvV_dPIUb0mhiwFO0NrmMjfg7KJIAeOcwuMlMk85Q1-ET8-DQTYfArr-EeHU6H3isU3jk4b5CWmEXx22fOGNvs5qEqQJVPfrbQ0WGKh4ZoARDA42tUmCWu-7Pm5e0Tg_pM76SOuDzWhK2pFEnbLuCMqIMZGrtD2fThoKENkAHFYi_KndZ8NoyoTi6oLNXNJeJ-FFb_ZNBuc_tuCOeLYSkpHWlMPRJSHyDJRz2RDo74quhx2McVdEWc"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase">Exclusivo</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2 truncate">LEGO Architecture: Paris</h4>
+<div class="flex justify-between items-center mb-6">
+<span class="text-secondary font-bold text-xl">49.99 €</span>
+</div>
+<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                            Adicionar ao Carrinho
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="Sealed Pokemon TCG Booster box with vibrant artwork of electric pokemon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLavXsXPQWgSffBS0rz2sEJ9EPJxn2mUCAggu61-DkxMJvfIQyR_PJRYtLMClEiItXH4184QLDuly48DxFba9987icLuE6SeJo1G6XulmMqxkLznbbTBy72p3hOBZMrNNV7iupXg3LpPpcBLG2YaVQJzdhkm0DMAeh5A5w7rx9lOrIb0-nJx26gTxZ7cQF8KqdKuw9TniIun8oP2Ouc8fkMpJkZoVJaSJW9JMdb1052kvdTlR9Dz1RmbXhKMN6D8vyr3X-lEEgrhE"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase">Popular</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2 truncate">Pokemon TCG: Silver Tempest Box</h4>
+<div class="flex justify-between items-center mb-6">
+<span class="text-secondary font-bold text-xl">144.00 €</span>
+</div>
+<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                            Adicionar ao Carrinho
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="High quality card game boosters for Magic the Gathering with fantasy art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6EDnxjQBwlIQWKTy3TU9ch1owVqTtvhluMqQHD3M6SPYr1PMRf0quBW3k2q0O9xodzkaZ-6FH7k1gYQtbeHAbW9sJiCARAdaEEyBzRGmBz6VzhC33xVTttJ82WKcN-RXm1-0WyflngmXpD_MPZtPV6xm9xAjsME4iPpAMTaFw-APSYKYFU6-_JZiBLqXt7pGnUllGEdXdVkWv_pzWkUrrEz-YunEsnUGYqABevFAkpsW8zmUnBtL67BQSpRc3cvuWGjOgMrmRcVs"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2 truncate">Magic: The Gathering Collector Booster</h4>
+<div class="flex justify-between items-center mb-6">
+<span class="text-secondary font-bold text-xl">24.50 €</span>
+</div>
+<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+                            Adicionar ao Carrinho
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOBRE NÓS -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Sobre Nós</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-12">
+                    Somos apaixonados pelo colecionismo. A Colecionar.pt nasceu para unir todos os entusiastas de cultura pop, jogos e réplicas premium em Portugal. Mais do que uma loja, somos o seu destino final para encontrar aquela peça rara que faltava na sua estante.
+                </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="text-center sm:text-left">
+<div class="text-3xl font-black text-tertiary mb-1">10k+</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Produtos</div>
+</div>
+<div class="text-center sm:text-left">
+<div class="text-3xl font-black text-tertiary mb-1">2</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Lojas Físicas</div>
+</div>
+<div class="text-center sm:text-left">
+<div class="text-3xl font-black text-tertiary mb-1">0 €</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Envio Grátis*</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square glass rounded-2xl overflow-hidden border border-outline-variant/20 p-4">
+<img class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100" data-alt="Interior of a modern high-end collector shop with neat displays and neon lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIGGkOUgpZjkUjE9ZaDcBIc0GNjblbIODSud2UGXWdWjoLSs3BQj-CRxYLw12fShGdyiw8U1WDGvzRx7wciyw-5mveIWQwVt1XEYwPg0Pi8dIyisln8Qmpqj4wTsEFT5IQJ4TU40iwjnu3AM2PETIN4PRoVjJIUTKkM3X4mTpU6XZ1fKjQNM31XM7XE6iKBH2X2VX2dtA0sbIH_8pR769tlK5FpRwSQ7u7ducjE6eD7N4QsPM36wNzRxK0tb68U3vpnACY67XWDCo"/>
+</div>
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/20 blur-[60px] rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- AS NOSSAS LOJAS -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">As Nossas Lojas</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Loja 1 -->
+<div class="glass p-8 rounded-2xl border border-outline-variant/10 flex flex-col md:flex-row gap-8 items-start">
+<div class="w-full md:w-1/2 aspect-video bg-surface-container-highest rounded-xl overflow-hidden relative">
+<div class="absolute inset-0 bg-secondary/5"></div>
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract map illustration of Amadora city with neon lines and dark purple background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5e-XO-NunqruwgWD-1UOg0dQiB-YJBdlaToNXckCcgyUmDw1-F9a7vypYOMwXYh_OBkyqAFGOmfdZqzixQb5Azo8XD7lK-awcjF0UzPejY-RFXXzRRtpFKxy-SsfCbUI3Vf2HYvvJBKtimzA8-tJtKEf_tA4t-mhmolcXOLSashaR8PJh82_2bwOrfrBRIoMEnOErpipyS9fAYcSMg9ivlvyBEipdq6GNiSfJJ0dsaANDWtZQx516M_brxT7Y5_vhVm7uM_S9FA"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+</div>
+<div class="absolute bottom-2 right-2 bg-background/80 text-[10px] px-2 py-1 rounded">Localização: Amadora</div>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-4">Loja Alfragide</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Centro Comercial dos Moinhos, R/C, Loja 11,<br/>Av. da Quinta Grande 22,<br/>2610-161 Amadora.
+                    </p>
+<button class="flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
+                        Como Chegar <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+<!-- Loja 2 -->
+<div class="glass p-8 rounded-2xl border border-outline-variant/10 flex flex-col md:flex-row gap-8 items-start">
+<div class="w-full md:w-1/2 aspect-video bg-surface-container-highest rounded-xl overflow-hidden relative">
+<div class="absolute inset-0 bg-primary/5"></div>
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract map illustration of Venda do Pinheiro with glowing pathways on dark canvas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ_Dz_RI2kdZsD2JITYf1sklab0tIUr6m_ogdmcLD1ZmwI_IF7PdAa7eDtokWqpsrpb9mQ9JXnjCaniprfjd_X0hvMJFar6FUXMFsa4xJX1k9rRtZwAaVy3_m_qlROm25u2bkSZ3DM9Lhvd-MEa6VdPU5VkSXFLh-HADAF5qPeH9KqOUCCwHS0uihaeDKfSJ5cH0f2zM4ET_G7obOVrSULxCcHfo9kySYSFfyiVb1FLv2n-DYvAIsot15brMU0Af_gMhU0myq_PqM"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary">location_on</span>
+</div>
+<div class="absolute bottom-2 right-2 bg-background/80 text-[10px] px-2 py-1 rounded">Localização: Venda do Pinheiro</div>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-4">Loja Venda do Pinheiro</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                        Pateo Fernando Pessoa, Av. 9 de Julho 58,<br/>Loja E,<br/>Venda do Pinheiro.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        Como Chegar <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- NEWSLETTER -->
+<section class="py-24 px-8">
+<div class="max-w-4xl mx-auto glass p-12 rounded-3xl border border-primary/20 text-center relative overflow-hidden">
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">Mantenha o seu Relicário Atualizado</h2>
+<p class="text-on-surface-variant mb-10">Fica a par das novidades e lançamentos exclusivos.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+<input class="flex-1 bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-6 py-4 focus:ring-2 focus:ring-secondary focus:outline-none text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="O seu e-mail" type="email"/>
+<button class="bg-primary text-on-primary-fixed font-bold px-8 py-4 rounded-xl hover:bg-secondary transition-colors duration-300">Subscrever</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-[#170b35] border-t border-[#ebe1ff]/10 font-['Inter'] text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-3xl font-black text-[#ffb148] mb-6 block">Colecionar.pt</span>
+<p class="text-[#ebe1ff]/60 mb-6">O seu portal exclusivo para tudo o que é colecionável em Portugal.</p>
+</div>
+<div>
+<h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Categorias</h4>
+<ul class="space-y-4">
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Funko POP</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">LEGO Sets</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Card Games</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Informações</h4>
+<ul class="space-y-4">
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Envios e Devoluções</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Termos e Condições</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Privacidade</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Contactos</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-[#ebe1ff]/60">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        geral@colecionar.pt
+                    </li>
+<li class="flex items-center gap-3 text-[#ebe1ff]/60">
+<span class="material-symbols-outlined text-sm">call</span>
+                        +351 123 456 789
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-[#ebe1ff]/5 text-center text-[#ebe1ff]/40">
+            © 2024 Colecionar.pt. O seu relicário digital de colecionáveis.
+        </div>
+</footer>
+</body></html>
