@@ -115,16 +115,16 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative">
 <div class="text-2xl font-bold tracking-tighter text-[#ebe1ff]">Colecionar.pt</div>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Categorias</a>
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Destaques</a>
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Lojas</a>
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#">Contactos</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#categorias">Categorias</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#destaques">Destaques</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#lojas">Lojas</a>
+<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#contactos">Contactos</a>
 </div>
 <div class="flex items-center gap-6">
-<button class="material-symbols-outlined text-[#bd9dff] hover:scale-105 transition-transform" data-icon="shopping_cart">shopping_cart</button>
-<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-6 py-2 rounded font-bold hover:scale-105 active:scale-95 transition-all duration-300">
+<a href="https://colecionar.pt" target="_blank" class="material-symbols-outlined text-[#bd9dff] hover:scale-105 transition-transform">shopping_cart</a>
+<a href="https://colecionar.pt" target="_blank" class="inline-block bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-6 py-2 rounded font-bold hover:scale-105 active:scale-95 transition-all duration-300">
                     Loja Online
-                </button>
+                </a>
 </div>
 <div class="bg-gradient-to-r from-transparent via-[#53ddfc15] to-transparent h-[1px] bottom-0 absolute left-0 right-0"></div>
 </div>
@@ -142,12 +142,12 @@
                 Funko POPs, LEGO, Magic the Gathering, Pokemon, manga e muito mais. A maior coleção de colecionáveis em Portugal.
             </p>
 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-<button class="group relative px-8 py-4 bg-gradient-to-br from-primary to-secondary rounded font-bold text-on-primary-fixed hover:shadow-[0_0_30px_rgba(83,221,252,0.4)] transition-all duration-500 scale-100 hover:scale-105 active:scale-95">
+<a href="https://colecionar.pt" target="_blank" class="inline-block group relative px-8 py-4 bg-gradient-to-br from-primary to-secondary rounded font-bold text-on-primary-fixed hover:shadow-[0_0_30px_rgba(83,221,252,0.4)] transition-all duration-500 scale-100 hover:scale-105 active:scale-95">
                     Explorar Coleção
-                </button>
-<button class="px-8 py-4 border border-outline-variant/30 glass rounded font-bold text-on-surface hover:border-primary/50 transition-all duration-300 scale-100 hover:scale-105 active:scale-95">
+                </a>
+<a href="#lojas" class="inline-block px-8 py-4 border border-outline-variant/30 glass rounded font-bold text-on-surface hover:border-primary/50 transition-all duration-300 scale-100 hover:scale-105 active:scale-95">
                     Visitar Loja
-                </button>
+                </a>
 </div>
 </div>
 <!-- Decorative Silhouettes -->
@@ -157,7 +157,7 @@
 </div>
 </header>
 <!-- FEATURED CATEGORIES -->
-<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<section class="py-24 px-8 max-w-screen-2xl mx-auto" id="categorias">
 <h2 class="font-headline text-4xl md:text-5xl font-bold mb-16 text-center">O Que Colecionas?</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 <!-- Category Cards -->
@@ -215,20 +215,20 @@
 </div>
 </section>
 <!-- DESTACADOS -->
-<section class="py-24 bg-surface-container-low/30 relative overflow-hidden">
+<section class="py-24 bg-surface-container-low/30 relative overflow-hidden" id="destaques">
 <div class="max-w-screen-2xl mx-auto px-8">
 <div class="flex justify-between items-end mb-12">
 <h2 class="font-headline text-4xl font-bold">Destaques</h2>
 <div class="flex gap-4">
-<button class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
+<button onclick="document.getElementById('carousel').scrollBy({left:-320,behavior:'smooth'})" class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined">arrow_back</span>
 </button>
-<button class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
+<button onclick="document.getElementById('carousel').scrollBy({left:320,behavior:'smooth'})" class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined">arrow_forward</span>
 </button>
 </div>
 </div>
-<div class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 -mx-4 px-4">
+<div id="carousel" class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 -mx-4 px-4">
 <!-- Product Card 1 -->
 <div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
 <div class="h-64 overflow-hidden relative">
@@ -241,10 +241,10 @@
 <span class="text-secondary font-bold text-xl">15.90 €</span>
 <span class="text-on-surface-variant text-xs line-through">19.90 €</span>
 </div>
-<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<a href="https://colecionar.pt" target="_blank" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-sm">shopping_cart</span>
                             Adicionar ao Carrinho
-                        </button>
+                        </a>
 </div>
 </div>
 <!-- Product Card 2 -->
@@ -258,10 +258,10 @@
 <div class="flex justify-between items-center mb-6">
 <span class="text-secondary font-bold text-xl">49.99 €</span>
 </div>
-<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<a href="https://colecionar.pt" target="_blank" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-sm">shopping_cart</span>
                             Adicionar ao Carrinho
-                        </button>
+                        </a>
 </div>
 </div>
 <!-- Product Card 3 -->
@@ -275,10 +275,10 @@
 <div class="flex justify-between items-center mb-6">
 <span class="text-secondary font-bold text-xl">144.00 €</span>
 </div>
-<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<a href="https://colecionar.pt" target="_blank" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-sm">shopping_cart</span>
                             Adicionar ao Carrinho
-                        </button>
+                        </a>
 </div>
 </div>
 <!-- Product Card 4 -->
@@ -291,17 +291,17 @@
 <div class="flex justify-between items-center mb-6">
 <span class="text-secondary font-bold text-xl">24.50 €</span>
 </div>
-<button class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
+<a href="https://colecionar.pt" target="_blank" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-sm">shopping_cart</span>
                             Adicionar ao Carrinho
-                        </button>
+                        </a>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- SOBRE NÓS -->
-<section class="py-24 px-8 max-w-7xl mx-auto">
+<section class="py-24 px-8 max-w-7xl mx-auto" id="sobre">
 <div class="grid md:grid-cols-2 gap-16 items-center">
 <div>
 <h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Sobre Nós</h2>
@@ -332,7 +332,7 @@
 </div>
 </section>
 <!-- AS NOSSAS LOJAS -->
-<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<section class="py-24 px-8 max-w-screen-2xl mx-auto" id="lojas">
 <h2 class="font-headline text-4xl font-bold mb-16 text-center">As Nossas Lojas</h2>
 <div class="grid md:grid-cols-2 gap-12">
 <!-- Loja 1 -->
@@ -350,9 +350,9 @@
 <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
                         Centro Comercial dos Moinhos, R/C, Loja 11,<br/>Av. da Quinta Grande 22,<br/>2610-161 Amadora.
                     </p>
-<button class="flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
+<a href="https://maps.google.com/?q=Centro+Comercial+dos+Moinhos+Alfragide+Amadora" target="_blank" class="flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
                         Como Chegar <span class="material-symbols-outlined">arrow_right_alt</span>
-</button>
+</a>
 </div>
 </div>
 <!-- Loja 2 -->
@@ -370,15 +370,15 @@
 <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
                         Pateo Fernando Pessoa, Av. 9 de Julho 58,<br/>Loja E,<br/>Venda do Pinheiro.
                     </p>
-<button class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+<a href="https://maps.google.com/?q=Pateo+Fernando+Pessoa+Venda+do+Pinheiro" target="_blank" class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
                         Como Chegar <span class="material-symbols-outlined">arrow_right_alt</span>
-</button>
+</a>
 </div>
 </div>
 </div>
 </section>
 <!-- NEWSLETTER -->
-<section class="py-24 px-8">
+<section class="py-24 px-8" id="contactos">
 <div class="max-w-4xl mx-auto glass p-12 rounded-3xl border border-primary/20 text-center relative overflow-hidden">
 <div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
 <div class="relative z-10">
@@ -401,17 +401,17 @@
 <div>
 <h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Categorias</h4>
 <ul class="space-y-4">
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Funko POP</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">LEGO Sets</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Card Games</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="https://colecionar.pt/20-funko" target="_blank">Funko POP</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="https://colecionar.pt/21-lego" target="_blank">LEGO Sets</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="https://colecionar.pt" target="_blank">Card Games</a></li>
 </ul>
 </div>
 <div>
 <h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Informações</h4>
 <ul class="space-y-4">
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Envios e Devoluções</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Termos e Condições</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#">Privacidade</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="https://colecionar.pt/content/1-entrega" target="_blank">Envios e Devoluções</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="https://colecionar.pt/content/3-termos-e-condicoes-de-utilizacao" target="_blank">Termos e Condições</a></li>
+<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="https://colecionar.pt/content/2-aviso-legal" target="_blank">Privacidade</a></li>
 </ul>
 </div>
 <div>
