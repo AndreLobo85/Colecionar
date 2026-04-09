@@ -1,435 +1,681 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="pt-PT"><head>
+<html lang="pt-PT">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Colecionar.pt | O seu relicário digital de colecionáveis</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "error-container": "#a70138",
-                    "on-error-container": "#ffb2b9",
-                    "surface-container-lowest": "#000000",
-                    "on-tertiary-fixed-variant": "#563400",
-                    "tertiary-container": "#f8a010",
-                    "tertiary-fixed": "#f8a010",
-                    "tertiary": "#ffb148",
-                    "primary-fixed-dim": "#a67aff",
-                    "surface-container-high": "#241647",
-                    "surface-bright": "#31215b",
-                    "secondary-fixed-dim": "#48d4f3",
-                    "primary": "#bd9dff",
-                    "on-primary-fixed": "#000000",
-                    "on-surface-variant": "#b1a4d2",
-                    "on-tertiary": "#573500",
-                    "error-dim": "#d73357",
-                    "secondary-dim": "#40ceed",
-                    "surface-dim": "#11072c",
-                    "surface-tint": "#bd9dff",
-                    "on-primary-fixed-variant": "#390083",
-                    "outline-variant": "#4c4269",
-                    "primary-dim": "#8a4cfc",
-                    "surface-variant": "#2a1c51",
-                    "tertiary-dim": "#e79400",
-                    "background": "#11072c",
-                    "on-surface": "#ebe1ff",
-                    "secondary": "#53ddfc",
-                    "surface-container-low": "#170b35",
-                    "on-secondary-fixed": "#003a45",
-                    "inverse-on-surface": "#594f77",
-                    "inverse-surface": "#fdf7ff",
-                    "on-primary-container": "#2e006c",
-                    "on-secondary-fixed-variant": "#005969",
-                    "surface": "#11072c",
-                    "error": "#ff6e84",
-                    "secondary-container": "#00687a",
-                    "on-tertiary-container": "#4a2c00",
-                    "tertiary-fixed-dim": "#e79400",
-                    "on-primary": "#3c0089",
-                    "secondary-fixed": "#65e1ff",
-                    "outline": "#7a6f9a",
-                    "surface-container": "#1d113e",
-                    "primary-fixed": "#b28cff",
-                    "primary-container": "#b28cff",
-                    "on-tertiary-fixed": "#2a1700",
-                    "surface-container-highest": "#2a1c51",
-                    "on-background": "#ebe1ff",
-                    "on-error": "#490013",
-                    "on-secondary": "#004b58",
-                    "on-secondary-container": "#ecfaff",
-                    "inverse-primary": "#742fe5"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Space Grotesk"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Colecionar.pt | Um Mundo de Magia Num Único Local</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #11072c;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(189, 157, 255, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(83, 221, 252, 0.05) 0%, transparent 50%);
-            background-attachment: fixed;
-        }
-        .glass {
-            background: rgba(42, 28, 81, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .hero-mesh {
-            background: radial-gradient(circle at 50% 50%, rgba(189, 157, 255, 0.15) 0%, rgba(17, 7, 44, 0) 70%);
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+  :root {
+    --void: #080414;
+    --deep: #0e0a1f;
+    --surface: #141029;
+    --card: #1a1435;
+    --card-hover: #221a45;
+    --accent: #a855f7;
+    --accent-dim: #7c3aed;
+    --cyan: #22d3ee;
+    --amber: #f59e0b;
+    --amber-dim: #d97706;
+    --text: #e8e0f0;
+    --text-dim: #9b8fbf;
+    --text-muted: #6b5f8a;
+    --border: rgba(168, 85, 247, 0.12);
+    --glow-purple: rgba(168, 85, 247, 0.15);
+    --glow-cyan: rgba(34, 211, 238, 0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--void);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* --- NOISE OVERLAY --- */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.03;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* --- AMBIENT GRADIENT --- */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, var(--glow-purple), transparent),
+      radial-gradient(ellipse 60% 80% at 85% 80%, var(--glow-cyan), transparent),
+      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(245, 158, 11, 0.03), transparent);
+  }
+
+  /* --- SCROLL ANIMATIONS --- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+  .reveal-delay-7 { transition-delay: 0.7s; }
+
+  /* --- HERO ENTRANCE --- */
+  @keyframes heroFade {
+    from { opacity: 0; transform: translateY(30px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes floatOrb {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -20px) scale(1.1); }
+    66% { transform: translate(-20px, 15px) scale(0.95); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  .hero-title {
+    animation: heroFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  .hero-sub {
+    animation: heroFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  .hero-cta {
+    animation: heroFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+  }
+  .orb { animation: floatOrb 15s ease-in-out infinite; }
+  .orb-2 { animation: floatOrb 20s ease-in-out infinite reverse; }
+
+  /* --- TYPOGRAPHY --- */
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+
+  /* --- GLASS --- */
+  .glass {
+    background: rgba(20, 16, 41, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+  }
+
+  /* --- CARDS --- */
+  .cat-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(168,85,247,0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .cat-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.15), 0 0 0 1px rgba(168, 85, 247, 0.2);
+  }
+  .cat-card:hover::before { opacity: 1; }
+  .cat-card:hover img { transform: scale(1.15) rotate(2deg); }
+  .cat-card img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .cat-card .glow-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cat-card:hover .glow-line { transform: scaleX(1); }
+
+  /* --- PRODUCT CARDS --- */
+  .prod-card {
+    min-width: 300px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+  .prod-card:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 12px 40px rgba(34, 211, 238, 0.1);
+  }
+  .prod-card:hover img { transform: scale(1.08); }
+  .prod-card img { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+
+  /* --- BADGE --- */
+  .badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* --- CTA BUTTON --- */
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, var(--accent), var(--cyan));
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(168, 85, 247, 0.3), 0 0 60px rgba(34, 211, 238, 0.15);
+  }
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: var(--text);
+    text-decoration: none;
+    background: rgba(168, 85, 247, 0.06);
+    transition: all 0.3s;
+  }
+  .cta-secondary:hover {
+    border-color: var(--accent);
+    background: rgba(168, 85, 247, 0.12);
+    transform: translateY(-2px);
+  }
+
+  /* --- SCROLLBAR --- */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* --- NAV --- */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 2rem;
+    transition: all 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(8, 4, 20, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem;
+  }
+  nav a { text-decoration: none; }
+
+  /* --- STORE CARD --- */
+  .store-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.4s;
+  }
+  .store-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 40px var(--glow-purple);
+  }
+
+  /* --- FLOATING WHATSAPP --- */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: heroFade 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+  }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* --- SECTION DIVIDER --- */
+  .section-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  /* --- STAT CARD --- */
+  .stat-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: all 0.4s;
+  }
+  .stat-card:hover {
+    border-color: var(--amber);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.1);
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 768px) {
+    .hero-title-text { font-size: 2.8rem !important; }
+    .grid-cats { grid-template-columns: repeat(2, 1fr) !important; }
+    .grid-stores { grid-template-columns: 1fr !important; }
+    .nav-links { display: none !important; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  }
+  @media (max-width: 480px) {
+    .grid-cats { grid-template-columns: 1fr !important; }
+    .hero-title-text { font-size: 2.2rem !important; }
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+</style>
 </head>
-<body class="font-body text-on-surface antialiased overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#11072c]/80 backdrop-blur-xl shadow-[0_0_20px_rgba(189,157,255,0.1)] font-['Space_Grotesk'] tracking-tight">
-<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative">
-<div class="text-2xl font-bold tracking-tighter text-[#ebe1ff]">Colecionar.pt</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#categorias">Categorias</a>
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#destaques">Destaques</a>
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#lojas">Lojas</a>
-<a class="text-[#ebe1ff]/80 hover:text-[#bd9dff] transition-colors hover:scale-105 duration-300" href="#contactos">Contactos</a>
-</div>
-<div class="flex items-center gap-6">
-<a href="#destaques" class="material-symbols-outlined text-[#bd9dff] hover:scale-105 transition-transform">shopping_cart</a>
-<a href="#categorias" class="inline-block bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-6 py-2 rounded font-bold hover:scale-105 active:scale-95 transition-all duration-300">
-                    Loja Online
-                </a>
-</div>
-<div class="bg-gradient-to-r from-transparent via-[#53ddfc15] to-transparent h-[1px] bottom-0 absolute left-0 right-0"></div>
-</div>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="tel:+351966772714" class="whatsapp-float" title="Ligar +351 966 772 714">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div style="max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center">
+    <a href="#" style="font-family:Outfit;font-weight:900;font-size:1.5rem;color:var(--amber);letter-spacing:-0.03em">
+      Colecionar<span style="color:var(--text-dim)">.pt</span>
+    </a>
+    <div class="nav-links" style="display:flex;gap:2.5rem;align-items:center">
+      <a href="#categorias" style="color:var(--text-dim);font-size:13px;font-weight:500;letter-spacing:0.02em;transition:color 0.3s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-dim)'">Categorias</a>
+      <a href="#destaques" style="color:var(--text-dim);font-size:13px;font-weight:500;letter-spacing:0.02em;transition:color 0.3s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-dim)'">Destaques</a>
+      <a href="#lojas" style="color:var(--text-dim);font-size:13px;font-weight:500;letter-spacing:0.02em;transition:color 0.3s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-dim)'">Lojas</a>
+      <a href="#contactos" style="color:var(--text-dim);font-size:13px;font-weight:500;letter-spacing:0.02em;transition:color 0.3s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-dim)'">Contacto</a>
+    </div>
+    <a href="#categorias" class="cta-primary" style="padding:10px 24px;font-size:12px">
+      <span class="material-symbols-outlined" style="font-size:16px">storefront</span> Explorar
+    </a>
+  </div>
 </nav>
-<!-- HERO SECTION -->
-<header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-<div class="absolute inset-0 hero-mesh z-0"></div>
-<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
-<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"></div>
-<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
-<h1 class="font-headline text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-gradient-to-b from-on-surface to-on-surface-variant bg-clip-text text-transparent">
-                Um Mundo de Magia<br/>Num Único Local
-            </h1>
-<p class="text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-12 leading-relaxed">
-                Funko POPs, LEGO, Magic the Gathering, Pokemon, manga e muito mais. A maior coleção de colecionáveis em Portugal.
-            </p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-<a href="#categorias" class="inline-block group relative px-8 py-4 bg-gradient-to-br from-primary to-secondary rounded font-bold text-on-primary-fixed hover:shadow-[0_0_30px_rgba(83,221,252,0.4)] transition-all duration-500 scale-100 hover:scale-105 active:scale-95">
-                    Explorar Coleção
-                </a>
-<a href="#lojas" class="inline-block px-8 py-4 border border-outline-variant/30 glass rounded font-bold text-on-surface hover:border-primary/50 transition-all duration-300 scale-100 hover:scale-105 active:scale-95">
-                    Visitar Loja
-                </a>
-</div>
-</div>
-<!-- Decorative Silhouettes -->
-<div class="absolute -bottom-20 left-0 w-full flex justify-between px-10 opacity-20 pointer-events-none">
-<img class="w-64 h-auto transform -rotate-12 translate-y-10" data-alt="Dark silhouette of a high-end collectible action figure standing heroically against a deep purple misty background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2ihB7vtSKaVPVPTdPbQKdtKBHZfWQrTM5BQv1SW-DerWehFmRpsBPsshQQiVcKHKSYc3v2dAK8acCU_s9niyClVOKzq08Bb6-DQxzyw6QwAld5Kzc_Idant3LVU8Kw9P-aGNcSRAQtw9ALS1pfWL2pn1YihmM4vVqLTXGpg6XrNkUogTx7gQ0EbkqwASEc9sMTQ6BkI9JkQ2TfGSPx8Rgfkbpcc5xJt5B1VWy1Ax--vWNLoXKeH0SkWoZ3uJGI92ZNXFEfnjZvJ0"/>
-<img class="w-80 h-auto transform rotate-12 translate-y-20" data-alt="Silhouette of a dragon statue with glowing highlights on a dark mystical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsqQFutxQz51JjlHHlTRBQSlxNj_XOMmSUKNPwGfz-GTUptV3W-10sWoqDVxOG7oh8PymtfBCATp_nLsiVDB-eMvwkNH-MnNHOU7VbOSL2LuJWm4GNWolXqXMnR-DZiAx9zTz3fvafasiHCHfASc5oS1uV2Dh-Ysqiwnoj--D7DWY_TKBm0Zjmj1CnC1Zn-rsIOhZ-83HWA8r4Zo9FvD5zgJZJsRIHoe6AZHzuEe5yF612k6TfnBsDBvBv8vbUvspCpVIzn8-p_w"/>
-</div>
+
+<!-- HERO -->
+<header style="min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:6rem 2rem 4rem">
+  <div class="orb" style="position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,var(--glow-purple),transparent 70%);top:10%;left:5%"></div>
+  <div class="orb-2" style="position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,var(--glow-cyan),transparent 70%);bottom:15%;right:10%"></div>
+  <div class="orb" style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,0.06),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+
+  <div style="max-width:900px;text-align:center;position:relative;z-index:1">
+    <div class="hero-title" style="margin-bottom:0.5rem">
+      <span class="section-label">Desde 2010 em Portugal</span>
+    </div>
+    <h1 class="hero-title hero-title-text" style="font-size:4.5rem;font-weight:900;line-height:1.05;letter-spacing:-0.04em;margin-bottom:1.5rem">
+      Um Mundo de <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Magia</span><br>Num Único Local
+    </h1>
+    <p class="hero-sub" style="font-size:1.15rem;color:var(--text-dim);max-width:600px;margin:0 auto 2.5rem;line-height:1.7">
+      Funko POPs, LEGO, Magic the Gathering, Pokémon, manga e muito mais. A maior coleção de colecionáveis em Portugal.
+    </p>
+    <div class="hero-cta" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="#categorias" class="cta-primary">Explorar Coleção <span class="material-symbols-outlined" style="font-size:18px">arrow_downward</span></a>
+      <a href="#lojas" class="cta-secondary">Visitar Loja</a>
+    </div>
+  </div>
 </header>
-<!-- FEATURED CATEGORIES -->
-<section class="py-24 px-8 max-w-screen-2xl mx-auto" id="categorias">
-<h2 class="font-headline text-4xl md:text-5xl font-bold mb-16 text-center">O Que Colecionas?</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Category Cards -->
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
-<span class="material-symbols-outlined text-6xl">toys</span>
-</div>
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Close up of a stylized vinyl pop culture figure with vibrant colors on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrJpzPlFnenV-RVjnts8Q9cH3Fm5vq-GWRBFQdwRljwfa22TnAoiTWa06nreH00khgxmvGwx7wcmZ7X1k7-Dbb4mux6AhKg2BXhB7ahe3s-TcEscummoMnAuOiONh6YxWTooJflRGb1_UROFGmaKqdzl69YFIvQmR-YVkYb3VU2UkVa1TqA2d_tg6TJNemPDLg55AnaR_G8vhHj_JE4F-asV2Yav_oGqKf2jQawFaE0bra9bqYUqt7iy0UDcPB7jSQotx2sxaYWHc"/>
-<h3 class="text-xl font-bold mb-2">Funko POP</h3>
-<p class="text-sm text-on-surface-variant">As figuras mais icónicas da cultura pop</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Detailed close up of plastic building blocks arranged artistically with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcAPUN4L8Ty8V_skH1LAtGcPxI5u_R8MjQsXqIZoveI9RufqEwRL6uUMQ3tjvEb5TOYpgBqV_CG_R4-ug5OUaKK-lWnNHxKPwnLQwiY70_gQFgvEn4VppqG8-pIgC3zxYkXnVXcqshsoTQOwdxpAY87RfsIJZqanFw3iyoqYxde1sTQUfWrBzY2IkB7kihYj1lg5u8B1ayB2cm51U52GhtJFh9hzIKA4g8_j4kFxK4K4UL94y9fynew0ov0iy6jdvvopkloaD42FA"/>
-<h3 class="text-xl font-bold mb-2">LEGO</h3>
-<p class="text-sm text-on-surface-variant">Sets exclusivos e colecionáveis</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Collection of collectible trading cards with intricate fantasy artwork and foil highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEtXT0FBtdDrI-jP6NkuvDxijMnx9jHRkOhBaXbC2FV5_NK2SyM-BhetCrbA_JTyyTQYfRF_o7k_PpR9G3a1t8FbMJ1FoUXyZxRNbJihHcLzEj8jciaJaHxcJ_VXlqWrYoMTT9BwCuvHYZ_Ea4FBi9cEyfz8EA3DalcZKjtsAsfhM9EADclzRdz_hW4_goENZTulWI8khSzNhr_k_p66u3nsHKqTQ0EGx7p-sanoUN6r4v9N5ng-_Io6wGnT6f4Oxdxeakm1uZokk"/>
-<h3 class="text-xl font-bold mb-2">Magic the Gathering</h3>
-<p class="text-sm text-on-surface-variant">Cartas, decks e acessórios</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A rare shiny trading card with a pocket monster design and metallic texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BpLhjeWlGx4RnGiBc-02D4l5WYIx8c_ubD78JpTbkxQi968b6OVxtQU00ORzmHivD9E9qSEr6uAE4_q-Q5IWiRZ9XiYXDtosRONzcwQ73eHNde1zdGnDtD2vK_rdP9_04PnH48GTjXBnpaD5hhQdtZWFL9RFN93ybY2hqEv-oNAbUZZDLK2RVu5HqmhVJOPmhmRiAjZ9jhc9Zys2sHtUom80W1rCagMVT-1DQsEWkZQ3B6-YAA7xDATyckGdcKTt9QZoKNyonlE"/>
-<h3 class="text-xl font-bold mb-2">Pokemon TCG</h3>
-<p class="text-sm text-on-surface-variant">Coleção completa de cartas Pokemon</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A stack of Japanese graphic novels with colorful cover art on a dark bookshelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzTXZHv5SJo-afCV5c38pH8JI8eXrsdadCmHB6Hppl8c_3jKoipBwwAjAUbvPY0pF82nGfYv5KYNxjTA1vkI_dxuhQ1YUwyJQzFQruAMm85KyVj1pzf0gODnNlIHSe3L5BUrnA2l0Kgi3TYFLEys5N_3YOG3OsoBqMTJnvrpo8U2nC9X13TQeB1GGIp_TG9AKM_vscmk_DOHxrg8rE_uFQYkD3bo2bSDDywg-0-duAPFUHEp2H1ryNqfteZyMxl0tZshK4-PtxO3Y"/>
-<h3 class="text-xl font-bold mb-2">Yu-Gi-Oh</h3>
-<p class="text-sm text-on-surface-variant">Cartas e boosters</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A detailed gold and silver replica of a magical artifact from a famous film series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpyb-D092Lo0P7XdzuEvBWH2-R6hblSpf_aj9Bn1egIgoP_XtVlWaSD5_tdulqxZw45GBCuz4sPCbDKrYF48jAEdYFHbJHMR2GC8CKX4Vh0E_eGrxQ8FjgdnJMnEaw8buASF8Qd0KzQub_ntjnkVQxPsYMvWQS_HQ0FVcVJkIYL61yNIDsILo6sX2JLnVAiwDzsC258dipxTxhjslG0ykWEU5N-G2iPWyA5WuZAmGTIZZbi41UT7QqDCXjSZ3Wfk2U9or-YSSGkQ"/>
-<h3 class="text-xl font-bold mb-2">The Noble Collection</h3>
-<p class="text-sm text-on-surface-variant">Réplicas premium de filmes</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Close up of Japanese manga books spine art on a dark purple surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURwry9RiBF1R7q3g645mCFyg72QZD1v576wNH22m78tlZFId3O4hD-C4872ffc8J9DnXsrpGyaKkTnyDhttQ5YVFKqcbD7lH4FviwgTEIUmDpuvz2magVbHQ4BYo25Cf3vtEAoHc2yQfFKbsuV6mvbKATechM_fV1kbqy8E3NOZzNgwmu0KF_I_6XwGGArW0oPtfhPoBbmLgGGc0hAsiQgdmDaVGCmi_AllrDoE-k_7QiHWTYFULfwzLzJ8p6FSSUkVne0g-qHRo"/>
-<h3 class="text-xl font-bold mb-2">Manga e Livros</h3>
-<p class="text-sm text-on-surface-variant">As melhores séries e edições</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-<div class="group relative glass p-6 rounded-xl border border-outline-variant/10 hover:border-secondary/40 transition-all duration-500 overflow-hidden cursor-pointer">
-<img class="w-24 h-24 mb-6 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Hand painted miniature figures from a wargaming series with metallic armor and glowing details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChV9xsK6qZyGpq2vwoGM03a3d51f-BeKORCB2UYEtjre1fZDTmxZkLFsAZWf-vbR_PQwUO78fPJoUmyYndcZQFkXHqkUYgmul0egmDtJcVZ7nu913J17WIWdVhT6CFCVxeG_q81E77Ys1TODamQFfZsojJssYCN5WLJ4hczTth7Esbndo6DyQ0a66FoctNmg4eKmDnHg9uTcWJQLuXOFRFWwnAfR2EHrbT08CFT7yY9NxLma84WcPW0v2t3M-rzXef_IIMSNzoo00"/>
-<h3 class="text-xl font-bold mb-2">Games Workshop</h3>
-<p class="text-sm text-on-surface-variant">Warhammer e miniaturas</p>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-</div>
-</div>
+
+<!-- CATEGORIES -->
+<section id="categorias" style="padding:6rem 2rem;max-width:1400px;margin:0 auto">
+  <div class="reveal" style="text-align:center;margin-bottom:4rem">
+    <span class="section-label">Universos</span>
+    <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-0.03em">O Que Colecionas?</h2>
+  </div>
+
+  <div class="grid-cats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem">
+    <div class="cat-card reveal reveal-delay-1">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrJpzPlFnenV-RVjnts8Q9cH3Fm5vq-GWRBFQdwRljwfa22TnAoiTWa06nreH00khgxmvGwx7wcmZ7X1k7-Dbb4mux6AhKg2BXhB7ahe3s-TcEscummoMnAuOiONh6YxWTooJflRGb1_UROFGmaKqdzl69YFIvQmR-YVkYb3VU2UkVa1TqA2d_tg6TJNemPDLg55AnaR_G8vhHj_JE4F-asV2Yav_oGqKf2jQawFaE0bra9bqYUqt7iy0UDcPB7jSQotx2sxaYWHc" alt="Funko POP" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">Funko POP</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">As figuras mais icónicas da cultura pop</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-2">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcAPUN4L8Ty8V_skH1LAtGcPxI5u_R8MjQsXqIZoveI9RufqEwRL6uUMQ3tjvEb5TOYpgBqV_CG_R4-ug5OUaKK-lWnNHxKPwnLQwiY70_gQFgvEn4VppqG8-pIgC3zxYkXnVXcqshsoTQOwdxpAY87RfsIJZqanFw3iyoqYxde1sTQUfWrBzY2IkB7kihYj1lg5u8B1ayB2cm51U52GhtJFh9hzIKA4g8_j4kFxK4K4UL94y9fynew0ov0iy6jdvvopkloaD42FA" alt="LEGO" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">LEGO</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">Sets exclusivos e colecionáveis</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-3">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEtXT0FBtdDrI-jP6NkuvDxijMnx9jHRkOhBaXbC2FV5_NK2SyM-BhetCrbA_JTyyTQYfRF_o7k_PpR9G3a1t8FbMJ1FoUXyZxRNbJihHcLzEj8jciaJaHxcJ_VXlqWrYoMTT9BwCuvHYZ_Ea4FBi9cEyfz8EA3DalcZKjtsAsfhM9EADclzRdz_hW4_goENZTulWI8khSzNhr_k_p66u3nsHKqTQ0EGx7p-sanoUN6r4v9N5ng-_Io6wGnT6f4Oxdxeakm1uZokk" alt="Magic" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">Magic the Gathering</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">Cartas, decks e acessórios</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-4">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BpLhjeWlGx4RnGiBc-02D4l5WYIx8c_ubD78JpTbkxQi968b6OVxtQU00ORzmHivD9E9qSEr6uAE4_q-Q5IWiRZ9XiYXDtosRONzcwQ73eHNde1zdGnDtD2vK_rdP9_04PnH48GTjXBnpaD5hhQdtZWFL9RFN93ybY2hqEv-oNAbUZZDLK2RVu5HqmhVJOPmhmRiAjZ9jhc9Zys2sHtUom80W1rCagMVT-1DQsEWkZQ3B6-YAA7xDATyckGdcKTt9QZoKNyonlE" alt="Pokemon" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">Pokémon TCG</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">Coleção completa de cartas Pokémon</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-5">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzTXZHv5SJo-afCV5c38pH8JI8eXrsdadCmHB6Hppl8c_3jKoipBwwAjAUbvPY0pF82nGfYv5KYNxjTA1vkI_dxuhQ1YUwyJQzFQruAMm85KyVj1pzf0gODnNlIHSe3L5BUrnA2l0Kgi3TYFLEys5N_3YOG3OsoBqMTJnvrpo8U2nC9X13TQeB1GGIp_TG9AKM_vscmk_DOHxrg8rE_uFQYkD3bo2bSDDywg-0-duAPFUHEp2H1ryNqfteZyMxl0tZshK4-PtxO3Y" alt="Yu-Gi-Oh" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">Yu-Gi-Oh!</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">Cartas e boosters</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-6">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpyb-D092Lo0P7XdzuEvBWH2-R6hblSpf_aj9Bn1egIgoP_XtVlWaSD5_tdulqxZw45GBCuz4sPCbDKrYF48jAEdYFHbJHMR2GC8CKX4Vh0E_eGrxQ8FjgdnJMnEaw8buASF8Qd0KzQub_ntjnkVQxPsYMvWQS_HQ0FVcVJkIYL61yNIDsILo6sX2JLnVAiwDzsC258dipxTxhjslG0ykWEU5N-G2iPWyA5WuZAmGTIZZbi41UT7QqDCXjSZ3Wfk2U9or-YSSGkQ" alt="Noble Collection" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">The Noble Collection</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">Réplicas premium de filmes</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-7">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURwry9RiBF1R7q3g645mCFyg72QZD1v576wNH22m78tlZFId3O4hD-C4872ffc8J9DnXsrpGyaKkTnyDhttQ5YVFKqcbD7lH4FviwgTEIUmDpuvz2magVbHQ4BYo25Cf3vtEAoHc2yQfFKbsuV6mvbKATechM_fV1kbqy8E3NOZzNgwmu0KF_I_6XwGGArW0oPtfhPoBbmLgGGc0hAsiQgdmDaVGCmi_AllrDoE-k_7QiHWTYFULfwzLzJ8p6FSSUkVne0g-qHRo" alt="Manga" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">Manga e Livros</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">As melhores séries e edições</p>
+      <div class="glow-line"></div>
+    </div>
+    <div class="cat-card reveal reveal-delay-7">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuChV9xsK6qZyGpq2vwoGM03a3d51f-BeKORCB2UYEtjre1fZDTmxZkLFsAZWf-vbR_PQwUO78fPJoUmyYndcZQFkXHqkUYgmul0egmDtJcVZ7nu913J17WIWdVhT6CFCVxeG_q81E77Ys1TODamQFfZsojJssYCN5WLJ4hczTth7Esbndo6DyQ0a66FoctNmg4eKmDnHg9uTcWJQLuXOFRFWwnAfR2EHrbT08CFT7yY9NxLma84WcPW0v2t3M-rzXef_IIMSNzoo00" alt="Games Workshop" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;position:relative;z-index:1">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;position:relative;z-index:1">Games Workshop</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);position:relative;z-index:1">Warhammer e miniaturas</p>
+      <div class="glow-line"></div>
+    </div>
+  </div>
 </section>
-<!-- DESTACADOS -->
-<section class="py-24 bg-surface-container-low/30 relative overflow-hidden" id="destaques">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="flex justify-between items-end mb-12">
-<h2 class="font-headline text-4xl font-bold">Destaques</h2>
-<div class="flex gap-4">
-<button onclick="document.getElementById('carousel').scrollBy({left:-320,behavior:'smooth'})" class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined">arrow_back</span>
-</button>
-<button onclick="document.getElementById('carousel').scrollBy({left:320,behavior:'smooth'})" class="p-2 border border-outline-variant rounded-full hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-<div id="carousel" class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 -mx-4 px-4">
-<!-- Product Card 1 -->
-<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="Funko POP figure in original box, collector edition, pristine condition on dark shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1XNmGXAAywql5JPfhWallQmLUSH93EJVjB9ZAUCTpsQ9C9UWiTOVkJ-KAFTbJPYNsIW-2xada2zP_i0v4pRSAN7L8PDjxTVgUSFnS3XJLuIaxoNzubcQ1qBJGQS4zGlMPApRvFrY9neivcd-rBDGZHt_L0mvdQz1LVvU4CBa-RaOSyFyZ98c94olUobldN6yEBly2xAusLbW6TjiM9zB7LgBhLF_Ob1YaddHh8ghC8n-l0R3ghuQAy1imgAV23iBUR75-_klI7Wk"/>
-<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase">Novo</div>
-</div>
-<div class="p-6">
-<h4 class="font-bold text-lg mb-2 truncate">Funko POP! Marvel: Iron Man</h4>
-<div class="flex justify-between items-center mb-6">
-<span class="text-secondary font-bold text-xl">15.90 €</span>
-<span class="text-on-surface-variant text-xs line-through">19.90 €</span>
-</div>
-<a href="tel:+351966772714" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-sm">shopping_cart</span>
-                            Encomendar
-                        </a>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="LEGO Architecture set box featuring a modern city skyline with detailed brick work" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeyw2J2tEzTvlNOMpM4A75ZtvV_dPIUb0mhiwFO0NrmMjfg7KJIAeOcwuMlMk85Q1-ET8-DQTYfArr-EeHU6H3isU3jk4b5CWmEXx22fOGNvs5qEqQJVPfrbQ0WGKh4ZoARDA42tUmCWu-7Pm5e0Tg_pM76SOuDzWhK2pFEnbLuCMqIMZGrtD2fThoKENkAHFYi_KndZ8NoyoTi6oLNXNJeJ-FFb_ZNBuc_tuCOeLYSkpHWlMPRJSHyDJRz2RDo74quhx2McVdEWc"/>
-<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase">Exclusivo</div>
-</div>
-<div class="p-6">
-<h4 class="font-bold text-lg mb-2 truncate">LEGO Architecture: Paris</h4>
-<div class="flex justify-between items-center mb-6">
-<span class="text-secondary font-bold text-xl">49.99 €</span>
-</div>
-<a href="tel:+351966772714" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-sm">shopping_cart</span>
-                            Encomendar
-                        </a>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="Sealed Pokemon TCG Booster box with vibrant artwork of electric pokemon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLavXsXPQWgSffBS0rz2sEJ9EPJxn2mUCAggu61-DkxMJvfIQyR_PJRYtLMClEiItXH4184QLDuly48DxFba9987icLuE6SeJo1G6XulmMqxkLznbbTBy72p3hOBZMrNNV7iupXg3LpPpcBLG2YaVQJzdhkm0DMAeh5A5w7rx9lOrIb0-nJx26gTxZ7cQF8KqdKuw9TniIun8oP2Ouc8fkMpJkZoVJaSJW9JMdb1052kvdTlR9Dz1RmbXhKMN6D8vyr3X-lEEgrhE"/>
-<div class="absolute top-4 left-4 bg-secondary text-on-secondary text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase">Popular</div>
-</div>
-<div class="p-6">
-<h4 class="font-bold text-lg mb-2 truncate">Pokemon TCG: Silver Tempest Box</h4>
-<div class="flex justify-between items-center mb-6">
-<span class="text-secondary font-bold text-xl">144.00 €</span>
-</div>
-<a href="tel:+351966772714" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-sm">shopping_cart</span>
-                            Encomendar
-                        </a>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="min-w-[300px] bg-surface-variant rounded-xl overflow-hidden group border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500" data-alt="High quality card game boosters for Magic the Gathering with fantasy art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6EDnxjQBwlIQWKTy3TU9ch1owVqTtvhluMqQHD3M6SPYr1PMRf0quBW3k2q0O9xodzkaZ-6FH7k1gYQtbeHAbW9sJiCARAdaEEyBzRGmBz6VzhC33xVTttJ82WKcN-RXm1-0WyflngmXpD_MPZtPV6xm9xAjsME4iPpAMTaFw-APSYKYFU6-_JZiBLqXt7pGnUllGEdXdVkWv_pzWkUrrEz-YunEsnUGYqABevFAkpsW8zmUnBtL67BQSpRc3cvuWGjOgMrmRcVs"/>
-</div>
-<div class="p-6">
-<h4 class="font-bold text-lg mb-2 truncate">Magic: The Gathering Collector Booster</h4>
-<div class="flex justify-between items-center mb-6">
-<span class="text-secondary font-bold text-xl">24.50 €</span>
-</div>
-<a href="tel:+351966772714" class="w-full py-3 bg-surface-container-highest rounded font-bold border border-outline-variant/30 hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-sm">shopping_cart</span>
-                            Encomendar
-                        </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SOBRE NÓS -->
-<section class="py-24 px-8 max-w-7xl mx-auto" id="sobre">
-<div class="grid md:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Sobre Nós</h2>
-<p class="text-on-surface-variant text-lg leading-relaxed mb-12">
-                    Somos apaixonados pelo colecionismo. A Colecionar.pt nasceu para unir todos os entusiastas de cultura pop, jogos e réplicas premium em Portugal. Mais do que uma loja, somos o seu destino final para encontrar aquela peça rara que faltava na sua estante.
-                </p>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
-<div class="text-center sm:text-left">
-<div class="text-3xl font-black text-tertiary mb-1">10k+</div>
-<div class="text-xs uppercase tracking-widest text-on-surface-variant">Produtos</div>
-</div>
-<div class="text-center sm:text-left">
-<div class="text-3xl font-black text-tertiary mb-1">2</div>
-<div class="text-xs uppercase tracking-widest text-on-surface-variant">Lojas Físicas</div>
-</div>
-<div class="text-center sm:text-left">
-<div class="text-3xl font-black text-tertiary mb-1">0 €</div>
-<div class="text-xs uppercase tracking-widest text-on-surface-variant">Envio Grátis*</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-square glass rounded-2xl overflow-hidden border border-outline-variant/20 p-4">
-<img class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100" data-alt="Interior of a modern high-end collector shop with neat displays and neon lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIGGkOUgpZjkUjE9ZaDcBIc0GNjblbIODSud2UGXWdWjoLSs3BQj-CRxYLw12fShGdyiw8U1WDGvzRx7wciyw-5mveIWQwVt1XEYwPg0Pi8dIyisln8Qmpqj4wTsEFT5IQJ4TU40iwjnu3AM2PETIN4PRoVjJIUTKkM3X4mTpU6XZ1fKjQNM31XM7XE6iKBH2X2VX2dtA0sbIH_8pR769tlK5FpRwSQ7u7ducjE6eD7N4QsPM36wNzRxK0tb68U3vpnACY67XWDCo"/>
-</div>
-<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/20 blur-[60px] rounded-full"></div>
-</div>
-</div>
-</section>
-<!-- AS NOSSAS LOJAS -->
-<section class="py-24 px-8 max-w-screen-2xl mx-auto" id="lojas">
-<h2 class="font-headline text-4xl font-bold mb-16 text-center">As Nossas Lojas</h2>
-<div class="grid md:grid-cols-2 gap-12">
-<!-- Loja 1 -->
-<div class="glass p-8 rounded-2xl border border-outline-variant/10 flex flex-col md:flex-row gap-8 items-start">
-<div class="w-full md:w-1/2 aspect-video bg-surface-container-highest rounded-xl overflow-hidden relative">
-<div class="absolute inset-0 bg-secondary/5"></div>
-<img class="w-full h-full object-cover opacity-60" data-alt="Abstract map illustration of Amadora city with neon lines and dark purple background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5e-XO-NunqruwgWD-1UOg0dQiB-YJBdlaToNXckCcgyUmDw1-F9a7vypYOMwXYh_OBkyqAFGOmfdZqzixQb5Azo8XD7lK-awcjF0UzPejY-RFXXzRRtpFKxy-SsfCbUI3Vf2HYvvJBKtimzA8-tJtKEf_tA4t-mhmolcXOLSashaR8PJh82_2bwOrfrBRIoMEnOErpipyS9fAYcSMg9ivlvyBEipdq6GNiSfJJ0dsaANDWtZQx516M_brxT7Y5_vhVm7uM_S9FA"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-</div>
-<div class="absolute bottom-2 right-2 bg-background/80 text-[10px] px-2 py-1 rounded">Localização: Amadora</div>
-</div>
-<div class="flex-1">
-<h3 class="text-2xl font-bold mb-4">Loja Alfragide</h3>
-<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
-                        Centro Comercial dos Moinhos, R/C, Loja 11,<br/>Av. da Quinta Grande 22,<br/>2610-161 Amadora.
-                    </p>
-<a href="https://maps.google.com/?q=Centro+Comercial+dos+Moinhos+Alfragide+Amadora" target="_blank" class="flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
-                        Como Chegar <span class="material-symbols-outlined">arrow_right_alt</span>
-</a>
-</div>
-</div>
-<!-- Loja 2 -->
-<div class="glass p-8 rounded-2xl border border-outline-variant/10 flex flex-col md:flex-row gap-8 items-start">
-<div class="w-full md:w-1/2 aspect-video bg-surface-container-highest rounded-xl overflow-hidden relative">
-<div class="absolute inset-0 bg-primary/5"></div>
-<img class="w-full h-full object-cover opacity-60" data-alt="Abstract map illustration of Venda do Pinheiro with glowing pathways on dark canvas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ_Dz_RI2kdZsD2JITYf1sklab0tIUr6m_ogdmcLD1ZmwI_IF7PdAa7eDtokWqpsrpb9mQ9JXnjCaniprfjd_X0hvMJFar6FUXMFsa4xJX1k9rRtZwAaVy3_m_qlROm25u2bkSZ3DM9Lhvd-MEa6VdPU5VkSXFLh-HADAF5qPeH9KqOUCCwHS0uihaeDKfSJ5cH0f2zM4ET_G7obOVrSULxCcHfo9kySYSFfyiVb1FLv2n-DYvAIsot15brMU0Af_gMhU0myq_PqM"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-4xl text-primary">location_on</span>
-</div>
-<div class="absolute bottom-2 right-2 bg-background/80 text-[10px] px-2 py-1 rounded">Localização: Venda do Pinheiro</div>
-</div>
-<div class="flex-1">
-<h3 class="text-2xl font-bold mb-4">Loja Venda do Pinheiro</h3>
-<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
-                        Pateo Fernando Pessoa, Av. 9 de Julho 58,<br/>Loja E,<br/>Venda do Pinheiro.
-                    </p>
-<a href="https://maps.google.com/?q=Pateo+Fernando+Pessoa+Venda+do+Pinheiro" target="_blank" class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
-                        Como Chegar <span class="material-symbols-outlined">arrow_right_alt</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- NEWSLETTER -->
-<section class="py-24 px-8" id="contactos">
-<div class="max-w-4xl mx-auto glass p-12 rounded-3xl border border-primary/20 text-center relative overflow-hidden">
-<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
-<div class="relative z-10">
-<h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">Mantenha o seu Relicário Atualizado</h2>
-<p class="text-on-surface-variant mb-10">Fica a par das novidades e lançamentos exclusivos.</p>
-<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-<input class="flex-1 bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-6 py-4 focus:ring-2 focus:ring-secondary focus:outline-none text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="O seu e-mail" type="email"/>
-<button class="bg-primary text-on-primary-fixed font-bold px-8 py-4 rounded-xl hover:bg-secondary transition-colors duration-300">Subscrever</button>
-</form>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="w-full pt-16 pb-8 bg-[#170b35] border-t border-[#ebe1ff]/10 font-['Inter'] text-sm leading-relaxed">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto">
-<div class="col-span-1 md:col-span-1">
-<span class="text-3xl font-black text-[#ffb148] mb-6 block">Colecionar.pt</span>
-<p class="text-[#ebe1ff]/60 mb-6">O seu portal exclusivo para tudo o que é colecionável em Portugal.</p>
-</div>
-<div>
-<h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Categorias</h4>
-<ul class="space-y-4">
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#categorias">Funko POP</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#categorias">LEGO Sets</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#categorias">Card Games</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Informações</h4>
-<ul class="space-y-4">
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#contactos">Envios e Devoluções</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#contactos">Termos e Condições</a></li>
-<li><a class="text-[#ebe1ff]/60 hover:text-[#53ddfc] transition-transform hover:translate-x-1 inline-block" href="#contactos">Privacidade</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-[#bd9dff] font-bold mb-6 uppercase tracking-widest text-xs">Contactos</h4>
-<ul class="space-y-4">
-<li class="flex items-center gap-3 text-[#ebe1ff]/60">
-<span class="material-symbols-outlined text-sm">mail</span>
-                        geral@colecionar.pt
-                    </li>
-<li class="flex items-center gap-3 text-[#ebe1ff]/60">
-<span class="material-symbols-outlined text-sm">call</span>
-                        +351 123 456 789
-                    </li>
-</ul>
-</div>
-</div>
-<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-[#ebe1ff]/5 text-center text-[#ebe1ff]/40">
-            © 2024 Colecionar.pt. O seu relicário digital de colecionáveis.
+
+<!-- DESTAQUES -->
+<section id="destaques" style="padding:6rem 2rem;background:linear-gradient(180deg,transparent,rgba(20,16,41,0.4),transparent)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem">
+      <div>
+        <span class="section-label">Novidades</span>
+        <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-0.03em">Destaques</h2>
+      </div>
+      <div style="display:flex;gap:0.75rem">
+        <button onclick="document.getElementById('carousel').scrollBy({left:-340,behavior:'smooth'})" style="width:44px;height:44px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text-dim);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-dim)'">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <button onclick="document.getElementById('carousel').scrollBy({left:340,behavior:'smooth'})" style="width:44px;height:44px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text-dim);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-dim)'">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="carousel" class="no-scrollbar" style="display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:1rem">
+      <div class="prod-card reveal reveal-delay-1">
+        <div style="height:240px;overflow:hidden;position:relative;background:var(--surface)">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1XNmGXAAywql5JPfhWallQmLUSH93EJVjB9ZAUCTpsQ9C9UWiTOVkJ-KAFTbJPYNsIW-2xada2zP_i0v4pRSAN7L8PDjxTVgUSFnS3XJLuIaxoNzubcQ1qBJGQS4zGlMPApRvFrY9neivcd-rBDGZHt_L0mvdQz1LVvU4CBa-RaOSyFyZ98c94olUobldN6yEBly2xAusLbW6TjiM9zB7LgBhLF_Ob1YaddHh8ghC8n-l0R3ghuQAy1imgAV23iBUR75-_klI7Wk" alt="Funko POP Iron Man" style="width:100%;height:100%;object-fit:contain;padding:1.5rem">
+          <span class="badge" style="position:absolute;top:12px;left:12px;background:var(--amber);color:#000">Novo</span>
         </div>
+        <div style="padding:1.5rem">
+          <h4 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem">Funko POP! Marvel: Iron Man</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+            <span style="color:var(--cyan);font-weight:800;font-size:1.3rem">15.90 €</span>
+            <span style="color:var(--text-muted);font-size:0.85rem;text-decoration:line-through">19.90 €</span>
+          </div>
+          <a href="tel:+351966772714" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:13px;text-decoration:none;transition:all 0.3s;background:var(--surface)" onmouseover="this.style.background='var(--accent)';this.style.color='#000';this.style.borderColor='var(--accent)'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--text)';this.style.borderColor='var(--border)'">
+            <span class="material-symbols-outlined" style="font-size:16px">call</span> Encomendar
+          </a>
+        </div>
+      </div>
+
+      <div class="prod-card reveal reveal-delay-2">
+        <div style="height:240px;overflow:hidden;position:relative;background:var(--surface)">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeyw2J2tEzTvlNOMpM4A75ZtvV_dPIUb0mhiwFO0NrmMjfg7KJIAeOcwuMlMk85Q1-ET8-DQTYfArr-EeHU6H3isU3jk4b5CWmEXx22fOGNvs5qEqQJVPfrbQ0WGKh4ZoARDA42tUmCWu-7Pm5e0Tg_pM76SOuDzWhK2pFEnbLuCMqIMZGrtD2fThoKENkAHFYi_KndZ8NoyoTi6oLNXNJeJ-FFb_ZNBuc_tuCOeLYSkpHWlMPRJSHyDJRz2RDo74quhx2McVdEWc" alt="LEGO Paris" style="width:100%;height:100%;object-fit:contain;padding:1.5rem">
+          <span class="badge" style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff">Exclusivo</span>
+        </div>
+        <div style="padding:1.5rem">
+          <h4 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem">LEGO Architecture: Paris</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+            <span style="color:var(--cyan);font-weight:800;font-size:1.3rem">49.99 €</span>
+          </div>
+          <a href="tel:+351966772714" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:13px;text-decoration:none;transition:all 0.3s;background:var(--surface)" onmouseover="this.style.background='var(--accent)';this.style.color='#000';this.style.borderColor='var(--accent)'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--text)';this.style.borderColor='var(--border)'">
+            <span class="material-symbols-outlined" style="font-size:16px">call</span> Encomendar
+          </a>
+        </div>
+      </div>
+
+      <div class="prod-card reveal reveal-delay-3">
+        <div style="height:240px;overflow:hidden;position:relative;background:var(--surface)">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLavXsXPQWgSffBS0rz2sEJ9EPJxn2mUCAggu61-DkxMJvfIQyR_PJRYtLMClEiItXH4184QLDuly48DxFba9987icLuE6SeJo1G6XulmMqxkLznbbTBy72p3hOBZMrNNV7iupXg3LpPpcBLG2YaVQJzdhkm0DMAeh5A5w7rx9lOrIb0-nJx26gTxZ7cQF8KqdKuw9TniIun8oP2Ouc8fkMpJkZoVJaSJW9JMdb1052kvdTlR9Dz1RmbXhKMN6D8vyr3X-lEEgrhE" alt="Pokemon TCG" style="width:100%;height:100%;object-fit:contain;padding:1.5rem">
+          <span class="badge" style="position:absolute;top:12px;left:12px;background:var(--cyan);color:#000">Popular</span>
+        </div>
+        <div style="padding:1.5rem">
+          <h4 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem">Pokémon TCG: Silver Tempest Box</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+            <span style="color:var(--cyan);font-weight:800;font-size:1.3rem">144.00 €</span>
+          </div>
+          <a href="tel:+351966772714" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:13px;text-decoration:none;transition:all 0.3s;background:var(--surface)" onmouseover="this.style.background='var(--accent)';this.style.color='#000';this.style.borderColor='var(--accent)'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--text)';this.style.borderColor='var(--border)'">
+            <span class="material-symbols-outlined" style="font-size:16px">call</span> Encomendar
+          </a>
+        </div>
+      </div>
+
+      <div class="prod-card reveal reveal-delay-4">
+        <div style="height:240px;overflow:hidden;position:relative;background:var(--surface)">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6EDnxjQBwlIQWKTy3TU9ch1owVqTtvhluMqQHD3M6SPYr1PMRf0quBW3k2q0O9xodzkaZ-6FH7k1gYQtbeHAbW9sJiCARAdaEEyBzRGmBz6VzhC33xVTttJ82WKcN-RXm1-0WyflngmXpD_MPZtPV6xm9xAjsME4iPpAMTaFw-APSYKYFU6-_JZiBLqXt7pGnUllGEdXdVkWv_pzWkUrrEz-YunEsnUGYqABevFAkpsW8zmUnBtL67BQSpRc3cvuWGjOgMrmRcVs" alt="Magic Booster" style="width:100%;height:100%;object-fit:contain;padding:1.5rem">
+        </div>
+        <div style="padding:1.5rem">
+          <h4 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem">Magic: Collector Booster</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+            <span style="color:var(--cyan);font-weight:800;font-size:1.3rem">24.50 €</span>
+          </div>
+          <a href="tel:+351966772714" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:13px;text-decoration:none;transition:all 0.3s;background:var(--surface)" onmouseover="this.style.background='var(--accent)';this.style.color='#000';this.style.borderColor='var(--accent)'" onmouseout="this.style.background='var(--surface)';this.style.color='var(--text)';this.style.borderColor='var(--border)'">
+            <span class="material-symbols-outlined" style="font-size:16px">call</span> Encomendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE NÓS -->
+<section id="sobre" style="padding:6rem 2rem;max-width:1200px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="grid-stores">
+    <div class="reveal">
+      <span class="section-label">Quem Somos</span>
+      <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:1.5rem">Sobre Nós</h2>
+      <p style="color:var(--text-dim);font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem">
+        Somos apaixonados pelo colecionismo. A Colecionar.pt nasceu para unir todos os entusiastas de cultura pop, jogos e réplicas premium em Portugal. Mais do que uma loja, somos o seu destino final para encontrar aquela peça rara que faltava na sua estante.
+      </p>
+      <div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+        <div class="stat-card reveal reveal-delay-1">
+          <div style="font-family:Outfit;font-size:2rem;font-weight:900;color:var(--amber);margin-bottom:0.25rem">10k+</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted)">Produtos</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div style="font-family:Outfit;font-size:2rem;font-weight:900;color:var(--amber);margin-bottom:0.25rem">2</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted)">Lojas Físicas</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div style="font-family:Outfit;font-size:2rem;font-weight:900;color:var(--amber);margin-bottom:0.25rem">0 €</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted)">Envio Grátis*</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2" style="position:relative">
+      <div style="border-radius:20px;overflow:hidden;border:1px solid var(--border);aspect-ratio:1">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIGGkOUgpZjkUjE9ZaDcBIc0GNjblbIODSud2UGXWdWjoLSs3BQj-CRxYLw12fShGdyiw8U1WDGvzRx7wciyw-5mveIWQwVt1XEYwPg0Pi8dIyisln8Qmpqj4wTsEFT5IQJ4TU40iwjnu3AM2PETIN4PRoVjJIUTKkM3X4mTpU6XZ1fKjQNM31XM7XE6iKBH2X2VX2dtA0sbIH_8pR769tlK5FpRwSQ7u7ducjE6eD7N4QsPM36wNzRxK0tb68U3vpnACY67XWDCo" alt="Interior da loja" style="width:100%;height:100%;object-fit:cover;filter:grayscale(0.3);transition:filter 0.6s" onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(0.3)'">
+      </div>
+      <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,0.2),transparent 70%)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOJAS -->
+<section id="lojas" style="padding:6rem 2rem;max-width:1200px;margin:0 auto">
+  <div class="reveal" style="text-align:center;margin-bottom:4rem">
+    <span class="section-label">Visite-nos</span>
+    <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-0.03em">As Nossas Lojas</h2>
+  </div>
+
+  <div class="grid-stores" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+    <div class="store-card reveal reveal-delay-1">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--cyan));display:flex;align-items:center;justify-content:center">
+          <span class="material-symbols-outlined" style="color:#000;font-size:24px">location_on</span>
+        </div>
+        <h3 style="font-size:1.4rem;font-weight:700">Alfragide</h3>
+      </div>
+      <p style="color:var(--text-dim);line-height:1.8;margin-bottom:2rem;font-size:0.95rem">
+        Centro Comercial dos Moinhos, R/C, Loja 11,<br>Av. da Quinta Grande 22,<br>2610-161 Amadora
+      </p>
+      <a href="https://maps.google.com/?q=Centro+Comercial+dos+Moinhos+Alfragide+Amadora" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-weight:600;font-size:14px;text-decoration:none;transition:gap 0.3s" onmouseover="this.style.gap='14px'" onmouseout="this.style.gap='8px'">
+        Como Chegar <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="store-card reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--amber),var(--amber-dim));display:flex;align-items:center;justify-content:center">
+          <span class="material-symbols-outlined" style="color:#000;font-size:24px">location_on</span>
+        </div>
+        <h3 style="font-size:1.4rem;font-weight:700">Venda do Pinheiro</h3>
+      </div>
+      <p style="color:var(--text-dim);line-height:1.8;margin-bottom:2rem;font-size:0.95rem">
+        Pateo Fernando Pessoa,<br>Av. 9 de Julho 58, Loja E,<br>Venda do Pinheiro
+      </p>
+      <a href="https://maps.google.com/?q=Pateo+Fernando+Pessoa+Venda+do+Pinheiro" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:var(--amber);font-weight:600;font-size:14px;text-decoration:none;transition:gap 0.3s" onmouseover="this.style.gap='14px'" onmouseout="this.style.gap='8px'">
+        Como Chegar <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER / CONTACTO -->
+<section id="contactos" style="padding:6rem 2rem">
+  <div class="reveal" style="max-width:700px;margin:0 auto;text-align:center;padding:4rem 3rem;border-radius:24px;background:linear-gradient(135deg,var(--card),var(--surface));border:1px solid var(--border);position:relative;overflow:hidden">
+    <div style="position:absolute;top:-60px;left:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,0.15),transparent 70%)"></div>
+    <div style="position:absolute;bottom:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,0.1),transparent 70%)"></div>
+    <div style="position:relative;z-index:1">
+      <span class="section-label">Fique Ligado</span>
+      <h2 style="font-size:2rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Novidades e Lançamentos</h2>
+      <p style="color:var(--text-dim);margin-bottom:2rem">Fica a par das novidades e lançamentos exclusivos.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscrito!'" style="display:flex;gap:0.75rem;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="email" placeholder="O seu e-mail" required style="flex:1;min-width:200px;padding:14px 20px;border-radius:12px;border:1px solid var(--border);background:var(--void);color:var(--text);font-family:Sora;font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+        <button type="submit" style="padding:14px 28px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#000;font-weight:700;font-size:14px;cursor:pointer;font-family:Sora;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Subscrever</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="padding:4rem 2rem 2rem;border-top:1px solid var(--border);background:var(--deep)">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem" class="grid-cats">
+    <div>
+      <div style="font-family:Outfit;font-weight:900;font-size:1.5rem;color:var(--amber);margin-bottom:1rem">Colecionar<span style="color:var(--text-muted)">.pt</span></div>
+      <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;max-width:280px">O seu portal exclusivo para tudo o que é colecionável em Portugal.</p>
+    </div>
+    <div>
+      <h4 style="font-family:Outfit;font-weight:700;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem">Categorias</h4>
+      <div style="display:flex;flex-direction:column;gap:0.75rem">
+        <a href="#categorias" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">Funko POP</a>
+        <a href="#categorias" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">LEGO Sets</a>
+        <a href="#categorias" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">Card Games</a>
+        <a href="#categorias" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">Manga</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-family:Outfit;font-weight:700;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem">Informações</h4>
+      <div style="display:flex;flex-direction:column;gap:0.75rem">
+        <a href="#sobre" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">Sobre Nós</a>
+        <a href="#lojas" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">Lojas</a>
+        <a href="#contactos" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">Envios</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-family:Outfit;font-weight:700;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem">Contactos</h4>
+      <div style="display:flex;flex-direction:column;gap:0.75rem">
+        <a href="mailto:colecionar@colecionar.pt" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">
+          <span class="material-symbols-outlined" style="font-size:16px">mail</span> colecionar@colecionar.pt
+        </a>
+        <a href="tel:+351966772714" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">
+          <span class="material-symbols-outlined" style="font-size:16px">call</span> +351 966 772 714
+        </a>
+        <a href="https://instagram.com/colecionar.pt" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:6px;transition:color 0.2s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text-muted)'">
+          <span class="material-symbols-outlined" style="font-size:16px">photo_camera</span> @colecionar.pt
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid rgba(107,95,138,0.15);text-align:center;color:var(--text-muted);font-size:0.8rem">
+    &copy; 2024 Colecionar.pt &mdash; Um Mundo de Magia Num Único Local
+  </div>
 </footer>
-</body></html>
+
+<!-- SCRIPTS -->
+<script>
+// Navbar scroll effect
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
